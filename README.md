@@ -33,4 +33,4 @@ Clone the repository and build the project using your chosen build tool:
     mvn clean install
 
 ## Running the Application
-Currently, the primary method for execution and demonstration is by running the project's included test cases."
+Currently, the primary method for execution and demonstration is by running the project's included test cases.
