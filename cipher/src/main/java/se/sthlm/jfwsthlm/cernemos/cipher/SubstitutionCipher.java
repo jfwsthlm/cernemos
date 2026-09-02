@@ -31,4 +31,13 @@ public class SubstitutionCipher
 
         return cipherText.toString();
     }
+
+    public String substitute(String cipherText, Map<Character, Character> substitutionMap)
+    {
+        StringBuilder result = new StringBuilder(cipherText.length());
+        for (char ch : cipherText.toCharArray()) {
+            result.append(substitutionMap.getOrDefault(ch, '-'));
+        }
+        return result.toString();
+    }
 }
