@@ -15,6 +15,7 @@ class FrequencyAnalyserTest
         Map<Character, Integer> frequencyMap = frequencyAnalyser.countSymbols("HELLOWORLD");
         assertEquals(1, frequencyMap.get('H'));
         assertEquals(3, frequencyMap.get('L'));
+        assertEquals(7, frequencyMap.size()); // Ensures no unexpected characters were counted
     }
 
     @Test
@@ -23,5 +24,12 @@ class FrequencyAnalyserTest
         FrequencyAnalyser frequencyAnalyser = new FrequencyAnalyser();
         frequencyAnalyser.countSymbols(null);
         assertTrue(true);
+    }
+
+    @Test
+    void countSymbolsWithEmptyStringReturnsEmptyMap() {
+        FrequencyAnalyser analyser = new FrequencyAnalyser();
+        Map<Character, Integer> frequency = analyser.countSymbols("");
+        assertTrue(frequency.isEmpty());
     }
 }
